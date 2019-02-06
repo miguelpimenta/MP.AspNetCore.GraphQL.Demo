@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GraphiQl;
+using GraphQL;
+using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using MP.AspNetCore.GraphQL.Data;
+using MP.AspNetCore.GraphQL.Models;
+using MP.AspNetCore.GraphQL.Models.Schemas;
 
 namespace MP.AspNetCore.GraphQL
 {
@@ -26,6 +25,15 @@ namespace MP.AspNetCore.GraphQL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<PersonsQuery>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IPersonRepository, PersonRepository>();
+            services.AddScoped<IDocumentExecuter, DocumentExecuter>();
+            services.AddTransient<RoleType>();
+            services.AddTransient<PersonType>();
+            var sp = services.BuildServiceProvider();
+            services.AddScoped<ISchema>(_ => new PersonsSchema(type => (GraphType)sp.GetService(type)) { Query = sp.GetService<PersonsQuery>() });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +49,7 @@ namespace MP.AspNetCore.GraphQL
                 app.UseHsts();
             }
 
+            app.UseGraphiQl();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
