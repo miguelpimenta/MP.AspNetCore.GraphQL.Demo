@@ -7,7 +7,7 @@ namespace MP.AspNetCore.GraphQL.Models
     {
         public PersonType(IRoleRepository roleRepository)
         {
-            Field(x => x.Id).Description("Person id.");
+            Field(x => x.Id).Description("Person Id.");
             Field(x => x.Name).Description("Person Name.");
             Field(x => x.Description, nullable: true).Description("Person description.");
             Field(x => x.BirthDate).Description("Person BirthDate.");

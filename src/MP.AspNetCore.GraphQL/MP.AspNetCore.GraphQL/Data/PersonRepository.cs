@@ -19,6 +19,7 @@ namespace MP.AspNetCore.GraphQL.Data
                     Name = "John Smith",
                     BirthDate = new System.DateTime(1985, 01, 01),
                     Description = "Someone...",
+                    CoursesId =  new int[] { 1, 2 }
                 },
                 new Person()
                 {
@@ -27,6 +28,7 @@ namespace MP.AspNetCore.GraphQL.Data
                     Name = "Donald Trump",
                     BirthDate = new System.DateTime(1960, 01, 01),
                     Description = "An alien...",
+                    CoursesId =  new int[] { 1 }
                 },
                 new Person()
                 {
