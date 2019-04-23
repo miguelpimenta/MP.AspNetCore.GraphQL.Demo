@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace MP.AspNetCore.GraphQL.Models
+﻿namespace MP.AspNetCore.GraphQL.Models
 {
-    public class Student
+    public class Student : Person
     {
+        public int StudentNum { get; set; }
+
+        public int[] Courses { get; set; }
+
+        private Course[] CoursesList { get; set; }
+
+        public int[] CourseUnits { get; set; }
+
+        private CourseUnit[] CourseUnitsList { get; set; }
     }
 }

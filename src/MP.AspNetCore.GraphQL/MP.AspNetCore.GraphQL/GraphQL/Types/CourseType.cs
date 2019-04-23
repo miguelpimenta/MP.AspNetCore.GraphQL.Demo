@@ -5,7 +5,7 @@ namespace MP.AspNetCore.GraphQL.GraphQL.Types
 {
     public class CourseType : ObjectGraphType<CourseType>
     {
-        public CourseType(IPersonRepository productRepository)
+        public CourseType(ICourseType productRepository)
         {
             Field(x => x.Id).Description("Role id.");
             Field(x => x.Description, nullable: true).Description("Role Description.");

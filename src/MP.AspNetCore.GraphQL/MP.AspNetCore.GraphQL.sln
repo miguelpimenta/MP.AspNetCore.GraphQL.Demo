@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.AspNetCore.GraphQL", "MP.AspNetCore.GraphQL\MP.AspNetCore.GraphQL.csproj", "{4E1DCD41-5C60-41FF-8001-07A882D31C2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MP.AspNetCore.GraphQL", "MP.AspNetCore.GraphQL\MP.AspNetCore.GraphQL.csproj", "{4E1DCD41-5C60-41FF-8001-07A882D31C2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ASpNetCore.GraphQL.Infrastructure", "MP.ASpNetCore.GraphQL.Infrastructure\MP.ASpNetCore.GraphQL.Infrastructure.csproj", "{08AC83B5-36B9-4A59-B44C-BD4F83E511C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.AspNetCore.GraphQL.Core", "MP.AspNetCore.GraphQL.Core\MP.AspNetCore.GraphQL.Core.csproj", "{71BCEB56-8ADD-4DD7-B419-1E75BE5F9442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4E1DCD41-5C60-41FF-8001-07A882D31C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E1DCD41-5C60-41FF-8001-07A882D31C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E1DCD41-5C60-41FF-8001-07A882D31C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AC83B5-36B9-4A59-B44C-BD4F83E511C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AC83B5-36B9-4A59-B44C-BD4F83E511C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AC83B5-36B9-4A59-B44C-BD4F83E511C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AC83B5-36B9-4A59-B44C-BD4F83E511C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BCEB56-8ADD-4DD7-B419-1E75BE5F9442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BCEB56-8ADD-4DD7-B419-1E75BE5F9442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BCEB56-8ADD-4DD7-B419-1E75BE5F9442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BCEB56-8ADD-4DD7-B419-1E75BE5F9442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

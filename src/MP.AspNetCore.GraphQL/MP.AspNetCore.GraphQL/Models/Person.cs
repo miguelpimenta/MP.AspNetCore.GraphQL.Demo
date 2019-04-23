@@ -11,9 +11,5 @@ namespace MP.AspNetCore.GraphQL.Models
         public string Description { get; set; }
 
         private Role Role { get; set; }
-
-        public int[] CoursesId { get; set; }
-
-        private CourseUnit[] Courses { get; set; }
     }
 }
